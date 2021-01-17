@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>16 anos da Ester</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="shortcut icon" href="{% static 'indice.png' %}"> 
+
+    </head>
+    <body>
+        <section>
+        <div id ="div2">
+            <div id="divv">
+
+            <h1 id="h1">Sejam bem-vindos</h1>
+         
+            </div>
+            <div class="icon">
+                <a href="/admin"><i class="fas fa-user-shield"></i></a>
+            </div>
+        </div>
+        </section>
+        <section>
+            <div id="livros">
+                <h2 id="oh2">EBOOKS</h2>
+            </div>
+            
+            <div class="pesquisa">
+                {% if request.GET.search%}
+                <a href="/" class="ii"><i class="fas fa-home"></i></a>
+                {%endif%}
+                <div class="pesquisa-box">
+                    <form method="GET" id="search-form">
+                        <input type="text" id="pesquisa" name="search" placeholder="Digite o nome do livro" class="pesquisa-text" value="{{request.GET.search}}">
+                        <button type="submit" id="botao"><i class="fas fa-search" id="search" name="search"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="Scroll">
+                    {% if not main %}
+                    <h2>sem livros</h2>
+                    {%endif%}
+                    {% for item in main %}
+                    <h2>{{item.numero}}</h2>
+                    <a target="_blank" href="{{item.link}}">
+                        <img src="/fotos/{{item.imagem}}" id="zero">
+                    </a>
+                    {% endfor %}
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if main.has_previous %}
+                            <a href="?page={{main.previous_page_number}}" id="ei"><i class="fas fa-arrow-left"></i></a>
+                            {% endif %}
+
+                            <span class="current">
+                                {% if  main.number != main.paginator.num_pages %}
+                                {{main.number}} de {{main.paginator.num_pages}}
+                                {%endif%}
+                            </span>
+
+                            {% if main.has_next %}
+                            <a href="?page={{main.next_page_number}}" id="ei"><i class="fas fa-arrow-right"></i></a>
+                            {% endif %}
+
+                        </span>
+                    </div>
+                    <h2><br></h2>
+        </section>
+        <div class="divv">
+        
+    </div>
+    <script src="{% static 'js/base.js' %}"></script>
+    </body>
+</html>
+
