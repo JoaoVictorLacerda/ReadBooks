@@ -1,0 +1,275 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg,#474444,#496681,#687466,#CD8D7B,#fbc490);
+    background-size: 300%,300%;
+    background-repeat:repeat;
+    animation: colors 7s ease infinite;
+}
+@keyframes colors{
+    0%{
+        background-position: 0%,50%;
+    }
+    50%{
+        background-position: 100%,50%;
+    }
+    100%{
+        background-position: 0%,50%;
+    }
+}
+
+#h1{
+    margin:1cm;
+    font-family: sans-serif;
+    font-size: 2.5vw;
+    font-weight:bold;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    position: relative;
+    opacity: 0;
+    animation: texto 0s 1s both;
+    
+}
+#div2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+    width: 100vw;
+}
+#divv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 0.5cm;
+    height: 5vw;
+    
+
+}
+#divv::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 34, 34);
+    transform: translateX(-100%);
+    border-radius: 8px;
+    animation:width 1.5s  both ,anima 1.2s 1s both ;
+}
+@keyframes texto{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes width{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes anima{
+    from{
+        transform: translateX(0);
+
+    }
+    to{
+        transform:translateX(100%);
+
+    }
+}
+
+#livros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#oh2{
+    margin-top: 1cm;
+    font-family: sans-serif;
+    font-size: 3vw;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    position: relative;
+    opacity: 0;
+    animation: texto 2s both;
+
+}
+
+#zero{
+    width: 200px;
+    animation: sombra 7s ease infinite;
+    
+    
+}
+@keyframes sombra{
+
+    0%{
+        box-shadow: 7px -7px 5px black;
+    }
+    50%{
+        box-shadow: -7px 7px 5px black;
+    }
+    100%{
+        box-shadow: 7px -7px 5px black;
+    }
+}
+
+#Scroll{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 370px;
+    overflow:scroll;
+    margin:1cm;
+}
+
+
+
+.icon{
+    position: absolute;
+    top:1vh;
+    right: 3vh;
+}
+.icon a{
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+/*paginas*/
+
+.pagination{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.step-links{
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-links .current{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-family:sans-serif;
+}
+#ei{
+    color: black
+}
+#ei:hover,#ei:active{
+    color: #ffffff;
+    transition: 0.5s;
+}
+#ei:not(:hover){
+    color: #000000;
+    transition: 0.4s;
+
+}
+
+
+
+
+
+/*Pesquisa*/
+
+.pesquisa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pesquisa-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #353b48;
+    height: 9vh;
+    width: 35vw;
+    border-radius: 40px;
+}
+.pesquisa-text{
+    border:none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    font-size: 15px;
+    color: #dad8d8
+
+}
+.fas.fa-search{
+    color:#ffffff;
+    cursor: pointer;
+    font-size:15px;
+    margin-left: 20px;
+    
+}
+
+
+@media(max-width:817px){
+    .pesquisa-box{
+        width: 40vw;
+    }
+   
+}
+@media(max-width:613px){
+    .pesquisa-box{
+        width: 66vw;
+    }
+}
+@media(max-width:628px){
+    .pesquisa-box{
+        width: 69vw;
+    }
+    
+}
+@media(max-width:450px){
+    .pesquisa-box{
+        width: 70vw;
+    }
+}
+@media(max-width:361px){
+    .pesquisa-box{
+        width: 90vw;
+    }
+}
+@media(max-width:285px){
+    .pesquisa-box{
+        width: 100vw;
+    }
+    .pesquisa-text{
+        font-size: 10px;
+    }
+    .fas.fa-search{
+        font-size: 15px;
+    }
+}
+
+
+.ii{
+    color:#ffffff;
+    margin:10px;
+}
+
+#botao{
+    background: none;
+    border: none
+}
