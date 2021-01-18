@@ -1,4 +1,4 @@
-Esse projeto está servindo para o público com dificuldade em configurar o ambiente django para fazer deploy para o Heroku
+Esse projeto está servindo ao público com dificuldade em configurar o ambiente django para fazer deploy para o Heroku
 
 obs:
 
