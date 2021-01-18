@@ -121,9 +121,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
+#dados estáticos e do banco
+'''STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = '/fotos/'
 
-MEDIA_ROOT = "{}/fotos".format(BASE_DIR)
+MEDIA_ROOT = "{}/fotos".format(BASE_DIR)'''
