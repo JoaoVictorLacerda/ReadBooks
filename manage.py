@@ -4,6 +4,7 @@ import os
 import sys
 
 
+
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'site_ester.settings.base')
     try:
