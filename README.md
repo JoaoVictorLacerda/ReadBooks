@@ -1,4 +1,4 @@
-Link para acesso direto: http://reabooks.herokuapp.com/
+Link para acesso direto: https://reabooks.herokuapp.com/
 
 Esse projeto está servindo ao público com dificuldade em configurar o ambiente django para fazer deploy para o Heroku
 
